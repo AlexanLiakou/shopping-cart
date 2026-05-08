@@ -14,7 +14,6 @@ export function ProductProvider ({children}) {
         const res = await fetch('api/products');
         if(!res) throw new Error('Failed to fetch products.');
         const data = await res.json();
-        console.log(data);
         setProducts(data)
       } catch (err) {
           setError(err);
